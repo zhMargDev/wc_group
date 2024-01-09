@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename= 'logos/mini_logo.svg') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/layout.css') }}">
+
+    <script type="text/javascript" src="{{ url_for('static', filename= 'js/layout.js') }}"></script>
+
+    {% block header %}{% endblock %}
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <a href="/"><img src="{{ url_for('static', filename= 'logos/logo.png') }}" class="header_logo"></a>
+        <div class="header_btns_box">
+            <a href="/" class="header_btn {% if request_path == '/' %} visited_btn {% endif %} "> <p class="header_btns_text">HOME</p> </a>
+            <a href="/about/" class="header_btn {% if request_path == '/about/' %} visited_btn {% endif %}"> <p class="header_btns_text">ABOUT US</p> </a>
+            <a href="/services/" class="header_btn {% if request_path == '/services/' %} visited_btn {% endif %}"> <p class="header_btns_text">SERVICES</p> </a>
+            <a href="/contacts/" class="header_btn {% if request_path == '/contacts/' %} visited_btn {% endif %}"> <p class="header_btns_text">CONTACTS</p> </a>
+        </div>
+    </header>
+    <!-- Content -->
+    {% block content %}{% endblock %}
+
+    <!--Appeal to client-->
+    <form id="f_feedback_box" action="/contacts/feedback/message/" method="post">
+        <h3 class="f__b_text ">Do you have questions or you want to order a service?</h3>
+        <h2 class="f__b_text">Contact us, send us a message and your contacts.</h2>
+
+        <div class="grid2">
+            <input type="text" class="footer_input" placeholder="Your First Name" onkeyup="f_input_write(this)">
+            <input type="text" class="footer_input" placeholder="Your Surname" onkeyup="f_input_write(this)">
+        </div>
+
+        <input type="email" class="footer_input" placeholder="Your E-Mail" onkeyup="f_input_write(this)">
+
+        <input type="tel" class="footer_input" placeholder="Your Phone Number" onkeyup="f_input_write(this)">
+
+        <textarea id="f_desc" class="footer_input" cols="0" rows="0" placeholder="Your message" onkeyup="f_input_write(this)"></textarea>
+
+        <div class="dflex">
+            <button id="f_send_btn" type="reset" class="f_btn">Send</button>
+            <button id="f_reset_btn" type="reset" class="f_btn" onclick="footer_clear_inputs(this)">Clear</button>
+        </div>
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+    </form>
+
+    <!-- Footer -->
+    <footer id="foot">
+        <div id="f_1_box">
+            <div class="">
+                <img src="{{ url_for('static', filename='logos/logo.png') }}" id="footer_logo">
+            </div>
+            <div class="f_boxes">
+                <a href="/services/" class="f_a"><h2 >SERVICES</h2></a>
+                <hr>
+                <h3 class="f_text">Web Sites Development</h3>
+                <h3 class="f_text">Programs Development</h3>
+                <h3 class="f_text">System Administration</h3>
+            </div>
+            <div class="f_boxes">
+                <a href="/services/" class="f_a"><h2 >CONTACTS</h2></a>
+                <hr>
+                <h3 class="f_text">+374(93) 43-42-33</h3>
+                <h3 class="f_text">zh.margaryan.dev@gmail.com</h3>
+                <h3 class="f_text">Armenia, Yerevan</h3>
+            </div>
+        </div>
+        <p id="f_bottom_text">Powered by WebCraft Group | 2024</p>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</body>
+</html>

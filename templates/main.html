@@ -1,0 +1,323 @@
+{% extends 'layout.html' %}
+
+{% block header %}
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/main.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename= 'js/main.js') }}"></script>
+    <title>WebCraft Group | Main Page</title>
+{% endblock %}
+
+{% block content %}
+    <div id="box_1" class="boxes">
+        <h1 id="main_lable" class="text">WELCOME</h1>
+        <h2 id="left_text" class="text">WebCraft Group develops and maintains websites and software at low prices.</h2>
+        <h2 id="right_text" class="text">Below you can find out about our services and prices or order a website.</h2>
+        <img src="{{ url_for('static', filename="logos/banner.png") }}" id="logo_banner" class="pictures">
+    </div>
+
+    <div id="box_2" class="boxes" style="background-image: url(' {{ url_for('static', filename='imgs/banner.png') }} ')">
+        <h1 id="about_lable" class="text">ABOUT US</h1>
+        <h2 id="about_left" class="text">We provide services for website creation and support. From more information, go to
+            <a href="/about/" class="about_link text">ABOUT US</a> page.</h2>
+        <h2 id="about_right" class="text">To order services, contact us by writing to us, or using other contacts by going to the
+            <a href="/contacts/" class="about_link text">CONTACTS</a> page.</h2>
+    </div>
+
+    <div id="box_3" class="boxes" style="background-image: url('{{ url_for('static', filename='imgs/services_banner.png') }}')">
+        <h1 id="services_lable" class="text">OUR SERVICES</h1>
+        <h2 id="services_left" class="text">Here you will see several of our services and their prices. To see all services, go to the
+            <a href="/services/" class="about_link text">SERVICES</a> page.</h2>
+
+        <h2 id="services_left_2" class="text">
+            <p>Mention our website</p> <p>on 3 social media</p> <p class="color_red discount_text">and get a 30% discount.</p></h2>
+
+    </div>
+
+    <div id="box_4" class="boxes">
+        <h2 id="about_services" class="about_services text">We develop, modernize and maintain websites.</h2>
+        <!--
+        <div id="service_box_1" class="services_boxes">
+            <div class="service_main_box">
+                <div class="service_box" id="service_sub_box_1">
+                    <h2 class="services_text text">ONE PAGE WEBSITE</h2>
+                    <div style="margin: 10px">
+                        <h3 class="text">
+                            A one-page website is a static website with or without functionality, most often used to advertise a product or service, or it can be a one-page summary.
+                            A one-page website is a good solution for advertising.
+                        </h3>
+                        <br>
+                        <h3 class="text">
+                            The price of such a project may depend on the number of animations, amount of information, and functionality.
+                        </h3>
+                        <hr>
+                        <h3 class="text">Development can take from 2 days to a month depending on the complexity of the project.</h3>
+                        <h3 class="text services_price">
+                            Price starting from $40.
+                        </h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service_main_box">
+                <div class="service_box" id="service_sub_box_2">
+                    <h2 class="services_text text">STATIC WEBSITE</h2>
+                    <div style="margin: 10px">
+                        <h3 class="text">
+                            Static websites are lighter and cheaper.
+                            As a rule, such sites are needed by those who want to show services or products that don't need to be changed.
+                            Such sites may have more than 1 page, and the price depends on the number and size of the page.
+                        </h3>
+                        <br>
+                        <h3 class="text">
+                            For example, static sites could be a corporate website, a multi-product promotional website,
+                            or a resume site that only needs to display its product or services and does not require any functionality.
+                        </h3>
+                        <h3 class="text">
+                            The price depends on the complexity and number of animations of the project.
+                        </h3>
+                        <hr>
+                        <h3 class="text">Development can take from 1 week to 2 months depending on the complexity of the project.</h3>
+                        <h3 class="text services_price">
+                            Price starting from $100.
+                        </h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service_main_box" style="margin-top: 50px">
+                <div class="service_box" id="service_sub_box_3">
+                    <h2 class="services_text text">DYNAMIC WEBSITE</h2>
+                    <div style="margin: 10px">
+                        <h3 class="text">
+                            Dynamic websites have many functions, animations, have a large database,
+                                and can also change data on the site in real time.
+                            They can also have user accounts and an admin panel.
+                        </h3>
+                        <br>
+                        <h3 class="text">
+                            Basically, dynamic websites are large projects, for example online portals, online stores.
+                        </h3>
+                        <h3 class="text">
+                            There are also small dynamic sites, for example,
+                                websites of companies that need to regularly change information on the site.
+                        </h3>
+                        <hr>
+                        <h3 class="text">
+                            The price of such a project will depend on the size of the project,
+                                and development can take from one month to 6 months.
+                        </h3>
+                        <h3 class="text services_price">
+                            Price starting from $500.
+                        </h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service_main_box" style="margin-top: 50px">
+                <div class="service_box" id="service_sub_box_4">
+                    <h2 class="services_text text">INDIVIDUAL WEBSITE</h2>
+                    <div style="margin: 10px">
+                        <h3 class="text">
+                            An individual website is unlike others, with individual functionality.
+                        </h3>
+                        <hr>
+                        <h3 class="text">
+                            The price depends entirely on your requirements.
+                        </h3>
+                        <h3 class="text services_price">
+                            Price starting from $100.
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        -->
+        <div id="service_box_1" class="services_boxes">
+            <div class="service_main_box">
+                <div class="service_box" id="service_sub_box_1">
+                    <h2 class="services_text text">ONE PAGE WEBSITE</h2>
+                    <div style="margin: 10px">
+                        <ul class="services_ul">
+                            <li>
+                                <h3 class="text">Concise presentation: product, service or information.</h3>
+                            </li>
+                            <li>
+                                <h3 class="text">Ideal for advertising: a simple and affordable way to attract attention.</h3>
+                            </li>
+                            <li>
+                                <h3 class="text">Cost: depends on complexity (animation, amount of information, functionality).</h3>
+                            </li>
+                        </ul>
+                        <hr>
+                        <h3 class="text">Development takes from 2 days to a month.</h3>
+                        <h3 class="text services_price">
+                            Price starting from $40.
+                        </h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service_main_box">
+                <div class="service_box" id="service_sub_box_2">
+                    <h2 class="services_text text">STATIC WEBSITE</h2>
+                    <div style="margin: 10px">
+                        <ul class="services_il">
+                            <li>
+                                <h3 class="text">Static sites: Simple, affordable for basic product/service pages.</h3>
+                            </li>
+                            <li>
+                                <h3 class="text">Lightweight & budget-friendly, static sites showcase products/services without frequent updates. Pages add cost.</h3>
+                            </li>
+                            <li>
+                                <h3 class="text">Static sites: Perfect for displaying info, not interactivity.
+                                                    Price depends on complexity (animations, etc.).</h3>
+                            </li>
+                        </ul>
+                        <hr>
+                        <h3 class="text">Development takes from 1 week to 2 months.</h3>
+                        <h3 class="text services_price">
+                            Price starting from $100.
+                        </h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service_main_box" style="margin-top: 50px">
+                <div class="service_box" id="service_sub_box_3">
+                    <h2 class="services_text text">DYNAMIC WEBSITE</h2>
+                    <div style="margin: 10px">
+                        <ul class="services_il">
+                            <li>
+                                <h3 class="text">If you sell products or services online, dynamic websites can help you create an attractive store
+                                            with many features such as a shopping cart, customer reviews and personalized recommendations.</h3>
+                            </li>
+                            <li>
+                                <h3 class="text">If you want to interact with your customers, dynamic sites can help you create feedback forms,
+                                            surveys, and other tools to collect feedback.</h3>
+                            </li>
+                            <li>
+                                <h3 class="text">If you want to keep your website up to date, dynamic sites can help
+                                            you easily add new content such as news, articles and events.</h3>
+                            </li>
+                        </ul>
+                        <hr>
+                        <h3 class="text">Development takes from a month to 6 months.</h3>
+                        <h3 class="text services_price">
+                            Price starting from $500.
+                        </h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service_main_box" style="margin-top: 50px">
+                <div class="service_box" id="service_sub_box_4">
+                    <h2 class="services_text text">INDIVIDUAL WEBSITE</h2>
+                    <div style="margin: 10px">
+                        <ul class="services_il">
+                            <li>
+                                <h3 class="text">Targeted solutions for different needs: Business promotion, creative expression, and knowledge sharing.</h3>
+                            </li>
+                            <li>
+                                <h3 class="text">Emphasis on customization: Each site is unique, reflecting your individual story.</h3>
+                            </li>
+                            <li>
+                                <h3 class="text">Strong Call to Action: Encourages potential clients to connect and discuss their specific needs.</h3>
+                            </li>
+                        </ul>
+                        <h3 class="text">The price depends entirely on your requirements.</h3>
+                        <hr>
+                        <h3 class="text">Development takes from a week to 6 months.</h3>
+                        <h3 class="text services_price">
+                            Price starting from $100.
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="box_5" class="boxes">
+        <h2 id="about_services_2" class="about_services text">We develop programs.</h2>
+
+        <div id="service_box_2" class="services_boxes">
+            <div class="service_main_box">
+                <div class="service_box" id="service_sub_box_2_1">
+                    <h2 class="services_text text">SIMPLE DESKTOP PROGRAMS</h2>
+                    <div style="margin: 10px">
+                        <ul class="services_ul">
+                            <li>
+                                <h3 class="text">Low development cost: Simple programs can be developed in a relatively short time and at low cost.
+                                    This makes them accessible to small businesses and individuals.</h3>
+                            </li>
+                            <li>
+                                <h3 class="text">Ease of use: Simple programs are usually easy to use and do not require special knowledge. This makes them accessible to a wide range of users.</h3>
+                            </li>
+                            <li>
+                                <h3 class="text">Flexibility: Simple programs can be easily adapted to the specific needs of users. This makes them versatile and suitable for a wide range of applications.</h3>
+                            </li>
+                        </ul>
+                        <h2 class="text">Examples</h2>
+                        <ul class="services_ul">
+                            <li>
+                                <h3 class="text">Games: Simple games such as puzzles, jigsaw puzzles and card games.</h3>
+                            </li>
+                            <li>
+                                <h3 class="text">Scripts: Scripts that automate repetitive tasks.</h3>
+                            </li>
+                            <li>
+                                <h3 class="text">Tools: Tools that help users perform various tasks, such as editing
+                                    documents, creating presentations, or playing music.</h3>
+                            </li>
+                        </ul>
+                        <hr>
+                        <h3 class="text">Development takes from 2 days.</h3>
+                        <h3 class="text services_price">
+                            Price starting from $50.
+                        </h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service_main_box">
+                <div class="service_box" id="service_sub_box_2_2">
+                    <h2 class="services_text text">DESKTOP COMPLEX PROGRAMS</h2>
+                    <div style="margin: 10px">
+                        <ul class="services_il">
+                            <li>
+                                <h3 class="text">Ability to create unique and innovative solutions: Sophisticated desktop programs enable
+                                        you to create unique and innovative solutions that can improve business performance or improve people's quality of life.</h3>
+                            </li>
+                            <li>
+                                <h3 class="text">High potential for growth: The market for sophisticated desktop software is growing, so developers have the opportunity to make good profits.</h3>
+                            </li>
+                            <li>
+                                <h3 class="text">Unique skills and knowledge: Developing complex desktop programs requires unique skills and knowledge that can make you a sought-after specialist.</h3>
+                            </li>
+                        </ul>
+                        <h2 class="text">Example</h2>
+                        <ul class="services ul">
+                            <li>
+                                <h3 class="text">Full programs.</h3>
+                            </li>
+                            <li>
+                                <h3 class="text">Programs with database.</h3>
+                            </li>
+                            <li>
+                                <h3 class="text">Programs that work with websites.</h3>
+                            </li>
+                        </ul>
+                        <hr>
+                        <h3 class="text">Development takes from 3 months.</h3>
+                        <h3 class="text services_price">
+                            Price starting from $1000.
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="box_6" class="boxes">
+        <h3 id="last_appeal_services" class="text">You can see more about our services on the <a href="/services/" class="about_link text">SERVICES</a> page.</h3>
+    </div>
+
+{% endblock %}
